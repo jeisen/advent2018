@@ -22,7 +22,7 @@ class FabricClaim
 
   # Parse claim format into component parts.
   def initialize(input_string)
-    m = FabricClaim.matcher.match(input_string)
+    m = self.class.matcher.match(input_string)
     @id, @x, @y, @size_x, @size_y = m[1].to_i, m[2].to_i, m[3].to_i, m[4].to_i, m[5].to_i if m
   end
 
